@@ -40,6 +40,6 @@ window.Pusher = require('pusher-js');
 window.Echo = new Echo({
     broadcaster: 'pusher',
     key: document.querySelector('meta[name="pusher-key"]').getAttribute('content'),
-    cluster: 'mt1',
+    cluster: 'ap2',
     encrypted: true
 });

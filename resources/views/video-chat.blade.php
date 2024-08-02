@@ -25,15 +25,16 @@
     <video id="remote-video" autoplay></video>
 
     <script src="https://cdn.jsdelivr.net/npm/simple-peer@9.9.0/simple-peer.min.js"></script>
-    <script src="{{ mix('js/app.js') }}"></script>
-    <script>
-        import Echo from 'laravel-echo';
+    
+    {{-- <script src="{{ mix('js/app.js') }}"></script> --}}
+    <script src="{{ mix('js/app.js') }}" type="module">
+        import Echo from './laravel-echo';
         window.Pusher = require('pusher-js');
 
         const echo = new Echo({
             broadcaster: 'pusher',
             key: document.querySelector('meta[name="pusher-key"]').getAttribute('content'),
-            cluster: 'mt1',
+            cluster: 'ap2',
             encrypted: true
         });
 
