@@ -25,9 +25,8 @@
     <video id="remote-video" autoplay></video>
 
     <script src="https://cdn.jsdelivr.net/npm/simple-peer@9.9.0/simple-peer.min.js"></script>
-    
-    {{-- <script src="{{ mix('js/app.js') }}"></script> --}}
-    <script src="{{ mix('js/app.js') }}" type="module">
+    {{-- <script src="{{ mix('js/app.js') }}"></script>  --}} 
+    <script type="module">
         import Echo from './laravel-echo';
         window.Pusher = require('pusher-js');
 

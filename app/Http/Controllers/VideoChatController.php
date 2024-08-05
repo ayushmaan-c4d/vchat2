@@ -21,7 +21,7 @@ class VideoChatController extends Controller
         $user = User::find($request->userId);
 
         if ($user) {
-            // Dispatch the event to notify the called user
+            // event to notify the called user
             event(new CallInitiated(Auth::id(), $request->signalData, $user->id));
         }
 
@@ -33,7 +33,7 @@ class VideoChatController extends Controller
         $user = User::find($request->userId);
 
         if ($user) {
-            // Dispatch the event to notify the caller that the call was accepted
+            // event to notify the caller that the call was accepted
             event(new CallAccepted(Auth::id(), $request->signalData, $user->id));
         }
 
